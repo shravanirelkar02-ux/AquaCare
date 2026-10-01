@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>AquaCare - Family Water Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <div class="app">
+
+        <section id="setupScreen" class="screen">
+
+            <div class="setupHeader">
+
+                <div class="logo">
+                    💧 AquaCare
+                </div>
+
+                <p>
+                    Family Water Tracker
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h1>
+                    Set Your Family's Goal
+                </h1>
+
+                <p class="intro">
+                    Stay hydrated together, one glass at a time.
+                </p>
+
+                <h3>
+                    Daily Goal
+                </h3>
+
+                <div class="options">
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="goal"
+                            value="glasses"
+                            checked
+                        >
+
+                        <span>
+                            💧 8 Glasses
+                        </span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="goal"
+                            value="litres"
+                        >
+
+                        <span>
+                            🥤 3 Litres
+                        </span>
+
+                    </label>
+
+                </div>
+
+                <h3>
+                    Glass Size
+                </h3>
+
+                <div class="options">
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="glass"
+                            value="200"
+                        >
+
+                        <span>
+                            200 ml
+                        </span>
+
+                    </label>
+
+
+                    <label class="option">
+
+                        <input
+                            type="radio"
+                            name="glass"
+                            value="250"
+                            checked
+                        >
+
+                        <span>
+                            250 ml
+                        </span>
+
+                    </label>
+
+                </div>
+
+                <h3>
+                    Family Members
+                </h3>
+
+                <div id="membersInput">
+
+                    <input
+                        type="text"
+                        class="memberInput"
+                        value="Person 1"
+                    >
+
+                    <input
+                        type="text"
+                        class="memberInput"
+                        value="Person 2"
+                    >
+
+                    <input
+                        type="text"
+                        class="memberInput"
+                        value="Person 3"
+                    >
+
+                    <input
+                        type="text"
+                        class="memberInput"
+                        value="Person 4"
+                    >
+
+                </div>
+
+
+                <button
+                    id="addPersonBtn"
+                    class="secondaryBtn"
+                >
+                    + Add Person
+                </button>
+
+
+                <button
+                    id="continueBtn"
+                    class="mainBtn"
+                >
+                    Continue →
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <section
+            id="dashboardScreen"
+            class="screen hidden"
+        >
+
+            <div class="top">
+
+                <div>
+
+                    <div class="logo">
+                        💧 AquaCare
+                    </div>
+
+                    <p class="dashboardSubtitle">
+                        Today's Family Progress
+                    </p>
+
+                </div>
+
+
+                <button
+                    id="resetBtn"
+                    class="resetBtn"
+                >
+                    Reset Today
+                </button>
+
+            </div>
+
+            <div class="progressCard">
+
+
+                <div class="waterDrop">
+                    💧
+                </div>
+
+
+                <h2 id="overallText">
+                    0 / 32 glasses
+                </h2>
+
+
+                <div class="progressBar">
+
+                    <div
+                        id="overallProgress"
+                        class="progressFill"
+                    ></div>
+
+                </div>
+
+
+                <p id="percentage">
+                    0%
+                </p>
+
+
+                <p id="remaining">
+                    8000 ml remaining
+                </p>
+
+            </div>
+
+
+            <div
+                id="peopleContainer"
+                class="peopleContainer"
+            ></div>
+
+            <div
+                id="message"
+                class="message"
+            ></div>
+
+        </section>
+
+    </div>
+
+
+    <div id="dropAnimation"></div>
+
+
+    <div
+        id="celebration"
+        class="celebration hidden"
+    >
+
+        <div class="celebrationBox">
+
+            <div class="bigDrop">
+                💧
+            </div>
+
+
+            <h1>
+                🎉 Goal Complete!
+            </h1>
+
+
+            <p id="celebrationText">
+                Great job!
+            </p>
+
+
+            <button
+                onclick="closeCelebration()"
+                class="celebrationButton"
+            >
+                Continue
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
